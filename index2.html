@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en, uk">
 <title>Головна</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +7,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!--<link rel="stylesheet" href="custom.css">-->
+<link rel="stylesheet" href="team.css">
+
 <style>
     body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
@@ -17,8 +18,43 @@
     .w3-hover-bfi:hover {color:#fff !important; background-color:#f96302 !important}
     .w3-hover-theme:hover {color:#371809 !important; background-color:#f96302 !important}
     .w3-bfi-footer {color:#f96302 !important; background-color:#6d3011 !important}
+
+    /*button Go to top*/
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #cd0046;
+        color: #ffffff;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+    }
+
+    #myBtn:hover {
+        background-color: #f96302;
+        color: #6d3011;
+    }
+
+    .ua-en-btn {
+        background-color: #6d3011; color: #f96302;
+        border: none;
+    }
+    .ua-en-btn:hover {border-color: #f96302;}
+
 </style>
 <body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 <!-- Navbar -->
 <div class="w3-top w3-theme">
@@ -47,13 +83,17 @@
 <!-- Header -->
 <header class="w3-container w3-center w3-theme" style="padding:128px 16px">
     <h1 class="w3-margin w3-jumbo">Бейкері Фуд Індастрі</h1>
+    <div>
+        <button class="w3-small ua-en-btn" autofocus>Ua</button>
+        <button class="w3-small ua-en-btn">En</button>
+    </div>
 </header>
 
-<!-- Про компанію -->
+<!-- 1. Про компанію -->
 <div class="w3-row-padding w3-padding-64 w3-container">
     <div class="w3-content">
-        <div class="w3-twothird">
-            <h1>Про компанію</h1>
+        <div class="w3-col">
+            <h1 style="text-align: center">Про компанію</h1>
             <h5 class="w3-padding-32">Компанія BFI розвиває франчайзинговий бізнес в сфері виробництва заморожених кулінарних напівфабрикатів для випічки.</h5>
             <p class="w3-text-grey">
                 Компанія виробляє напівфабрикати шляхом шокової заморозки на фабриці в смт.
@@ -61,56 +101,92 @@
                 BFI поставляє випічку під Private Label для великих торгових мереж, а також забезпечує розвиток в Україні
             </p>
         </div>
-
-        <div class="w3-third w3-center">
-            <img src="01.png" style="width: 200px; height: auto;">
-        </div>
     </div>
 </div>
 
-<!-- Команда -->
+
+<!-- 2. КОМАНДА -->
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
     <div class="w3-content">
-        <div class="w3-third w3-center">
-            <img src="our_team.png"  alt="Our team" style="width: 200px; height: auto;">
-        </div>
+        <div class="w3-col">
+            <h1 style="text-align: center">Команда</h1>
 
-        <div class="w3-twothird">
-            <h1>Команда</h1>
-            <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+            <div class="w3-row-padding">
+                <div class="w3-quarter">
+                    <div class="w3-card">
+                        <img src="man.jpg" alt="Mike" style="width:100%">
+                        <div class="container">
+                            <h2>Mike Ross</h2>
+                            <p class="title">CEO &amp; Founder</p>
+                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                            <p>example@example.com</p>
+                            <p><button class="button w3-theme w3-hover-theme">Написати</button></p>
+                        </div>
+                    </div>
+                </div>
 
-            <p class="w3-text-grey">
-            </p>
+                <div class="w3-quarter">
+                    <div class="w3-card">
+                        <img src="female.jpg" alt="Jane" style="width:100%">
+                        <div class="container">
+                            <h2>Jane Doe</h2>
+                            <p class="title">Art Director</p>
+                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                            <p>example@example.com</p>
+                            <p><button class="button w3-theme w3-hover-theme">Написати</button></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-quarter">
+                    <div class="w3-card">
+                        <img src="girl.jpg" alt="Maya" style="width:100%">
+                        <div class="container">
+                            <h2>Maya Smith</h2>
+                            <p class="title">Designer</p>
+                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                            <p>example@example.com</p>
+                            <p><button class="button w3-theme w3-hover-theme">Написати</button></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-quarter">
+                    <div class="w3-card">
+                        <img src="boy.png" alt="Mark" style="width:100%">
+                        <div class="container">
+                            <h2>Mark Duck</h2>
+                            <p class="title">Lawyer</p>
+                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                            <p>example@example.com</p>
+                            <p><button class="button w3-theme w3-hover-theme">Написати</button></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 </div>
 
-<!-- Виробництво -->
+<!-- 3. Виробництво -->
 <div class="w3-row-padding w3-padding-64 w3-container">
     <div class="w3-content">
-        <div class="w3-twothird">
-            <h1>Виробництво</h1>
+        <div class="w3-col">
+            <h1 style="text-align: center">Виробництво</h1>
             <h5 class="w3-padding-32">Sed turpis metus, commodo accumsan felis porttitor, varius dapibus augue.</h5>
             <p class="w3-text-grey">
                 Pellentesque in egestas odio, eget posuere sapien. Sed turpis metus, commodo accumsan felis porttitor, varius dapibus augue. Vestibulum at nunc aliquet magna lobortis dignissim eget a odio. In quis porttitor tellus, quis porta libero. Integer euismod consectetur convallis. Nullam nec diam ac sem consequat varius sed at mi. Praesent at sagittis tortor. Suspendisse id urna pretium, porttitor libero et, convallis risus. Sed vestibulum erat sed molestie porttitor. Quisque suscipit cursus ultricies. Proin ac urna urna. Curabitur a lobortis neque. Sed vitae ultricies ipsum, nec rutrum ex.
             </p>
         </div>
-
-        <div class="w3-third w3-center">
-            <img src="factory.png" alt="Our factory" style="width: 200px; height: auto;">
-        </div>
     </div>
 </div>
 
-<!-- Наші марки -->
+<!-- 4. Наші марки -->
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
     <div class="w3-content">
-        <div class="w3-third w3-center">
-            <img src="02.png" alt="Pizza" style="width: 200px; height: auto;">
-        </div>
-
-        <div class="w3-twothird">
-            <h1>Наші марки</h1>
+        <div class="w3-col">
+            <h1 style="text-align: center">Наші марки</h1>
             <h5 class="w3-padding-32">Morbi mollis purus sit amet augue vehicula tristique. Etiam at elementum libero, nec placerat augue. Nunc mi ligula, tempus ut nisl sit amet, imperdiet pellentesque ligula.</h5>
             <p class="w3-text-grey">
                 Morbi mollis purus sit amet augue vehicula tristique. Etiam at elementum libero, nec placerat augue. Nunc mi ligula, tempus ut nisl sit amet, imperdiet pellentesque ligula. Mauris congue ante sed magna interdum, pretium semper tellus luctus. Nam quis porta leo. Sed id venenatis tortor. Maecenas ornare et mi eget ornare. Curabitur porta velit ut turpis viverra, a pharetra massa consequat. Cras tempor sodales condimentum. Donec eget nulla eleifend, varius ipsum id, laoreet risus. Aliquam rhoncus feugiat aliquet. Mauris in vestibulum ligula, id varius diam. Sed non nisl ut massa ultricies vulputate.
@@ -119,32 +195,24 @@
     </div>
 </div>
 
-<!-- Постачальники -->
+<!-- 5. Постачальники -->
 <div class="w3-row-padding w3-padding-64 w3-container">
     <div class="w3-content">
-        <div class="w3-twothird">
-            <h1>Постачальники</h1>
+        <div class="w3-col">
+            <h1 style="text-align: center">Постачальники</h1>
             <h5 class="w3-padding-32">Aliquam rhoncus feugiat aliquet. Mauris in vestibulum ligula, id varius diam. Sed non nisl ut massa ultricies vulputate.</h5>
             <p class="w3-text-grey">
                 Morbi mollis purus sit amet augue vehicula tristique. Etiam at elementum libero, nec placerat augue. Nunc mi ligula, tempus ut nisl sit amet, imperdiet pellentesque ligula. Mauris congue ante sed magna interdum, pretium semper tellus luctus. Nam quis porta leo. Sed id venenatis tortor. Maecenas ornare et mi eget ornare. Curabitur porta velit ut turpis viverra, a pharetra massa consequat. Cras tempor sodales condimentum. Donec eget nulla eleifend, varius ipsum id, laoreet risus. Aliquam rhoncus feugiat aliquet. Mauris in vestibulum ligula, id varius diam. Sed non nisl ut massa ultricies vulputate.
             </p>
         </div>
-
-        <div class="w3-third w3-center">
-            <img src="03.png" style="width: 200px; height: auto;">
-        </div>
     </div>
 </div>
 
-<!-- Партнери -->
+<!-- 6. Партнери -->
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
     <div class="w3-content">
-        <div class="w3-third w3-center">
-            <img src="04.png" alt="Pizza" style="width: 200px; height: auto;">
-        </div>
-
-        <div class="w3-twothird">
-            <h1>Партнери</h1>
+        <div class="w3-col">
+            <h1 style="text-align: center">Партнери</h1>
             <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
 
             <p class="w3-text-grey">
@@ -156,32 +224,24 @@
     </div>
 </div>
 
-<!-- BFI Service -->
+<!-- 7. BFI Service -->
 <div class="w3-row-padding w3-padding-64 w3-container">
     <div class="w3-content">
-        <div class="w3-twothird">
-            <h1>BFI Service</h1>
+        <div class="w3-col">
+            <h1 style="text-align: center">BFI Service</h1>
             <h5 class="w3-padding-32">Aliquam rhoncus feugiat aliquet. Mauris in vestibulum ligula, id varius diam. Sed non nisl ut massa ultricies vulputate.</h5>
             <p class="w3-text-grey">
                 Vestibulum sagittis aliquam lacus in elementum. Aenean ac ante ut ante rutrum maximus. Curabitur sollicitudin lacinia volutpat. Proin tortor arcu, hendrerit et auctor cursus, congue et nisl. Sed volutpat nisl congue tincidunt sollicitudin. Pellentesque sit amet lacinia libero. Proin efficitur, ipsum id bibendum varius, lectus sem bibendum nulla, non viverra sem eros in nisl. In imperdiet quam ut ante ullamcorper scelerisque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur vestibulum sodales elit, vel finibus lectus. Vivamus suscipit nisl massa, at tempus neque malesuada at. Morbi non lorem ut lectus blandit cursus eget sit amet sapien.
             </p>
         </div>
-
-        <div class="w3-third w3-center">
-            <img src="05.png" style="width: 200px; height: auto;">
-        </div>
     </div>
 </div>
 
-<!-- Франчайзинг -->
+<!-- 8. Франчайзинг -->
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
     <div class="w3-content">
-        <div class="w3-third w3-center">
-            <img src="document.png" alt="Document" style="width: 200px; height: auto;">
-        </div>
-
-        <div class="w3-twothird">
-            <h1>Франчайзинг</h1>
+        <div class="w3-col">
+            <h1 style="text-align: center">Франчайзинг</h1>
             <h5 class="w3-padding-32">Curabitur vehicula dui non nulla mattis, vitae dictum mi placerat. Vestibulum sollicitudin in mauris et bibendum.</h5>
 
             <p class="w3-text-grey">
@@ -191,7 +251,7 @@
     </div>
 </div>
 
-<!-- Контакти -->
+<!-- 9. Контакти -->
 <div class="w3-row-padding w3-padding-64 w3-container">
     <div class="w3-content">
         <div class="w3-twothird">
@@ -201,7 +261,6 @@
                 <span class="w3-text-grey">Факс: 0464641297</span>
                 <span class="w3-text-grey">Email: zavod@bfi.com.ua</span>
                 <span class="w3-text-grey">Юридична адреса: 17000, Чернігівська обл., Козелецький р-н, смт. Козелець, вул. Соборності, буд. 125</span>
-
         </div>
 
         <div class="w3-third w3-center">
@@ -231,6 +290,25 @@
         } else {
             x.className = x.className.replace(" w3-show", "");
         }
+    }
+</script>
+
+<script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     }
 </script>
 
